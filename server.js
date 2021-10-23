@@ -31,7 +31,7 @@ mongoose.connect(
 
 // Require our HTML and API routes.
 app.use(require("./routes/htmlRoutes"));
-require("./routes/apiRoutes.js")(app);
+app.use(require("./routes/apiRoutes"));
 
 // Listen to our server.
 app.listen(PORT, () => {
